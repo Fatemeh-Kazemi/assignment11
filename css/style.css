@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --bgColor: #A4C639;
+}
+.logo{
+    width: 1300px;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#top-body{
+    width: 100px;
+    height: auto;
+    position: relative;
+}
+#face{
+    width: 100px;
+    height: 40px;
+    border-radius: 50% / 100% 100% 0 0;
+    background-color: var(--bgColor);
+}
+#ears .ear{
+    width: 3px;
+    height: 25px;
+    border-radius: 20px;
+    background-color: var(--bgColor)
+}
+#ears #left-ear{
+    transform: rotate(-30deg);
+    position: absolute;
+    top: -10px;
+    left: 15px;
+}
+#ears #right-ear{
+    transform: rotate(30deg);
+    position: absolute;
+    top: -10px;
+    left: 85px;
+}
+#eyes .eye{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+#eyes #left-eye{
+    position: absolute;
+    top: 15px;
+    left: 20px;
+}
+#eyes #right-eye{
+    position: absolute;
+    top: 15px;
+    left: 70px;
+}
+/******/
+#main-body{
+    width: 100px;
+    height: auto;
+    position: relative;
+    margin-top: 10px;
+}
+#body{
+    width: 100px;
+    height: 100px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: var(--bgColor);
+}
+#hands .hand, #legs .leg{
+    width: 20px;
+    height: 70px;
+    border-radius: 25px;
+    background-color: var(--bgColor);
+}
+#hands #left-hand{
+    position: absolute;
+    top: 0;
+    left: -25px;
+}
+#hands #right-hand{
+    position: absolute;
+    top: 0;
+    left: 105px;
+}
+#legs #left-leg{
+    position: absolute;
+    top: 80px;
+    left: 20px;
+}
+#legs #right-leg{
+    position: absolute;
+    top: 80px;
+    left: 60px;
+}
+/*********/
+@font-face {
+    font-family: 'android';
+    src: url(android-font/Android-sarographic.ttf);
+}
+.android-text{
+    font-family: 'android';
+    color: #404040;
+    letter-spacing: 5px;
+    margin-top: 80px;
+}
+/********/
+.hello-right-hand{
+    animation: hello-right-hand 1.5s;
+    transform-origin: 0% 0%;
+    transition-timing-function: linear;
+}
+@keyframes hello-right-hand {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-60deg);
+    }
+}
+.hello-left-hand{
+    animation: hello-left-hand 1.5s;
+    transform-origin: 0% 0%;
+    transition-timing-function: linear;
+}
+@keyframes hello-left-hand {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(60deg);
+    }
+}
